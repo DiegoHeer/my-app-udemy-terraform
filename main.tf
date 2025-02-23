@@ -14,11 +14,11 @@ resource "aws_vpc" "vpc" {
   enable_dns_hostnames = true
 }
 
-resource "tls_private_key" "generated" {
-  algorithm = "RSA"
-}
+# resource "tls_private_key" "generated" {
+#   algorithm = "RSA"
+# }
 
-resource "aws_key_pair" "generated" {
-  key_name   = "MyAWSKey${var.environment}"
-  public_key = tls_private_key.generated.public_key_openssh
-}
+# resource "aws_key_pair" "generated" {
+#   key_name   = "MyAWSKey${var.environment}"
+#   public_key = tls_private_key.generated.public_key_openssh
+# }
